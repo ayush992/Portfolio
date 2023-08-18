@@ -1063,9 +1063,9 @@ body {
 }
 @media screen and (max-device-width: 412px) {
     .popupInfo{
-        width: 110%;
+        width: 50vb;
         transform: translateX(-50%);
-        top: 73%;
+        top: 183vh;
         height: 50vh;
         overflow: scroll;
         font-size: 14px;
