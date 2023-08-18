@@ -548,7 +548,7 @@ body {
     width: 80%;
     border-radius: 50px;
     background: rgb(60, 60, 60, 0.3);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
     flex-direction: column;
 }
 .abt {
@@ -951,6 +951,10 @@ body {
     backdrop-filter: blur(20px);
     transition: all 0.5s;
 }
+::-webkit-scrollbar{
+    width: thin;
+    scrollbar-color: rgb(154, 216, 237) rgba(255, 255, 255, 0);
+}
 .popupHeading {
     display: flex;
     width: 100%;
@@ -1055,26 +1059,13 @@ body {
         top: 0;
         opacity: 0;
     }
-    /* .projectName {
-        font-size: 18px;
-        padding-bottom: 0;
-    }
-    .projectInfo > p {
-        font-size: 16px;
-    }
-    .linkImg {
-        margin-top: 0px;
-    }
-    .linkImg > img {
-        width: 20px;
-    } */
 }
 @media screen and (max-device-width: 412px) {
     .popupInfo{
         width: 110%;
         transform: translateX(-50%);
         top: 73%;
-        height: 60vh;
+        height: 50vh;
         overflow: scroll;
         font-size: 14px;
     }
