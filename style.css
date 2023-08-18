@@ -896,7 +896,7 @@ body {
     justify-content: center;
     text-align: center;
     backdrop-filter: blur(5px);
-    background: rgba(219, 219, 228, 0.3);
+    background: rgba(200, 200, 241, 0.3);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
@@ -909,7 +909,7 @@ body {
     width: 100%;
     justify-content: center;
     text-align: flex;
-    color: rgb(18, 18, 19);
+    color: rgb(19, 19, 20);
     font-weight: 600;
     font-size: 25px;
     padding-bottom: 10px;
@@ -941,10 +941,9 @@ body {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: scroll;
+    overflow-y: scroll;
     scrollbar-color: rgb(154, 216, 237) rgba(255, 255, 255, 0);
     scrollbar-width: thin;
-    /* scrollbar-base-color: transparent; */
     border-radius: 20px;
     background: rgba(40, 40, 71, 0.92);
     font-size: 17px;
