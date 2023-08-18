@@ -939,6 +939,10 @@ body {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: scroll;
+    scrollbar-color: rgb(154, 216, 237) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
+    /* scrollbar-base-color: transparent; */
     border-radius: 20px;
     background: rgba(40, 40, 71, 0.92);
     font-size: 17px;
@@ -955,7 +959,7 @@ body {
     padding: 5%;
     font-weight: bold;
     font-size: 40px;
-    color: #72F2AF;
+    color: #89E9FF;
 }
 .popupTech {
     display: flex;
@@ -965,7 +969,7 @@ body {
 .popupTech > p > span {
     font-weight: bold;
     font-size: 30px;
-    color: #72F2AF;
+    color: #89E9FF;
 }
 .projectDetails{
     display: flex;
