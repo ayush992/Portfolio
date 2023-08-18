@@ -953,8 +953,8 @@ body {
     backdrop-filter: blur(20px);
     transition: all 0.5s;
 }
-.popupInfo::-webkit-scrollbar-track{
-    width: 5px;
+.popupInfo::-webkit-scrollbar{
+    width: 3px;
     scrollbar-color: rgb(154, 216, 237) ;
 }
 .popupHeading {
