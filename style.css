@@ -953,7 +953,7 @@ body {
     backdrop-filter: blur(20px);
     transition: all 0.5s;
 }
-::-webkit-scrollbar{
+.popupInfo::-webkit-scrollbar{
     width: thin;
     scrollbar-color: rgb(154, 216, 237) rgba(255, 255, 255, 0);
 }
