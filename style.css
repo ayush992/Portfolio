@@ -758,7 +758,7 @@ body {
 .panelbtn.active {
     height: 99%;
     position: relative;
-    border: 10px solid;
+    border: 1px solid;
     border-image-slice: 1;
     border-width: 1px;
     border-image-source: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
@@ -831,6 +831,12 @@ body {
         opacity: 1;
     }
 }
+
+
+
+
+
+
 
 /* ******************PROJECTS***************** */
 .projects {
@@ -936,7 +942,8 @@ body {
     border-radius: 20px;
     background: rgba(40, 40, 71, 0.92);
     font-size: 17px;
-    border: 3px solid rgb(255, 255, 255, 0.8);
+    border: 3px solid ;
+    border-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     transition: all 0.5s;
 }
