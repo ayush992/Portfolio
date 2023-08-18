@@ -927,7 +927,6 @@ body {
     flex-direction: column;
     position: fixed;
     z-index: -1;
-    overflow: scroll;
     opacity: 0;
     height: 50vh;
     width: 50vh;
@@ -937,7 +936,7 @@ body {
     border-radius: 20px;
     background: rgba(40, 40, 71, 0.92);
     font-size: 17px;
-    border: 2px solid rgb(255, 255, 255, 0.5);
+    border: 3px solid rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     transition: all 0.5s;
 }
@@ -1065,6 +1064,7 @@ body {
         transform: translateX(-50%);
         top: 73%;
         height: 60vh;
+        overflow: scroll;
         font-size: 14px;
     }
     .popupHeading{
