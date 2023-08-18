@@ -896,7 +896,7 @@ body {
     justify-content: center;
     text-align: center;
     backdrop-filter: blur(5px);
-    background: rgba(150, 118, 225, 0.6);
+    background: rgba(61, 61, 62, 0.6);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
