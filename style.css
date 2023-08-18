@@ -118,6 +118,8 @@ a > img {
     .hamburger {
         display: block;
         cursor: pointer;
+        background: transparent;
+        border-color: transparent;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;

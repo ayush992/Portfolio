@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelector(".nav-ele");
+const navLink = document.querySelectorAll(".nav-ele");
 const button = document.querySelectorAll(".panelbtn");
 const callbtn = document.querySelectorAll(".insidepanel");
 
@@ -8,14 +8,13 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-    navLink.classList.toggle("active");
 }
 
-navLink.forEach((n) => {n.addEventListener("click", closeMenu)});
-function closeMenu() {
+navLink.forEach((n) => {n.addEventListener("click", function(){
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}
+})});
+
 
 
 
