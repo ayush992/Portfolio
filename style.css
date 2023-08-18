@@ -36,7 +36,8 @@ li::after {
     content: "";
     width: 0%;
     height: 3px;
-    background-color: rgb(198, 221, 240);
+    /* background-color: rgb(198, 221, 240); */
+    background: rgb(198, 221, 240, 1);
     position: absolute;
     left: 0px;
     bottom: -6px;
@@ -141,11 +142,12 @@ a > img {
         justify-content: center;
         gap: 20px;
         align-items: center;
-        background-color: #1f3b4d;
+        background: rgb(51, 59, 66, 0.5);
         width: 104%;
         padding-top: 30px;
         padding-bottom: 20px;
         text-align: center;
+        backdrop-filter: blur(20px);
         transition: all 0.7s ease;
     }
     .nav-menu.active {
@@ -201,7 +203,7 @@ body {
     z-index: 100;
     border: none;
     cursor: pointer;
-    background: rgba(143, 150, 137, 0.2);
+    background: rgba(150, 149, 160, 0.4);
     transition: all 0.5s;
 }
 .top > a {
@@ -223,7 +225,7 @@ body {
 }
 .arrow-up:hover {
     opacity: 1;
-    border-color: rgb(238, 236, 236);
+    border-color: rgb(255, 255, 255, 1);
 }
 /* .arrow-up {
     position: relative;
@@ -692,8 +694,13 @@ body {
     transform: rotate(315deg);
 }
 
+.panelbtn > img {
+    transform: rotate(180deg);
+    width: 25px;
+}
+
 .panelbtn:hover .thick-arrow-right {
-    border-color: rgb(238, 236, 236);
+    border-color: rgb(255, 255, 255, 1);
 }
 .panelbtn:hover,
 .panelbtn.active .panelbtn {
@@ -716,6 +723,7 @@ body {
     /* justify-content: center; */
     margin: 2px 0px 2px 0px;
     transition: all 0.5s ease;
+    cursor: pointer;
     overflow: hidden;
 }
 .panelHeading {
@@ -880,11 +888,12 @@ body {
     justify-content: center;
     text-align: center;
     backdrop-filter: blur(5px);
-    background: rgba(235, 218, 240, 0.3);
+    background: rgba(219, 219, 228, 0.3);
+    cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
 .projectInfo > p {
-    color: darkblue;
+    color: rgb(7, 7, 124);
 }
 
 .projectName {
@@ -892,7 +901,7 @@ body {
     width: 100%;
     justify-content: center;
     text-align: flex;
-    color: black;
+    color: rgb(18, 18, 19);
     font-weight: 600;
     font-size: 25px;
     padding-bottom: 10px;
@@ -912,6 +921,65 @@ body {
     object-fit: cover;
     width: 30px;
     height: auto;
+}
+.popupInfo {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: -1;
+    overflow: scroll;
+    opacity: 0;
+    height: 50vh;
+    width: 50vh;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: rgba(40, 40, 71, 0.92);
+    font-size: 17px;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    transition: all 0.5s;
+}
+.popupHeading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    font-weight: bold;
+    font-size: 40px;
+    color: #72F2AF;
+}
+.popupTech {
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
+.popupTech > p > span {
+    font-weight: bold;
+    font-size: 30px;
+    color: #72F2AF;
+}
+.projectDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.projectDetails > .linkImg{
+    display: none;
+}
+.projectDetails > ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 5%;
+}
+.projectDetails > ul > li{
+    list-style-type: disc;
+}
+.projectDetails > ul > li::after{
+    display: none;
 }
 
 @media screen and (max-width: 1235px) {
@@ -973,7 +1041,11 @@ body {
     .projectBox {
         width: 80%;
     }
-    .projectName {
+    .projectInfo {
+        top: 0;
+        opacity: 0;
+    }
+    /* .projectName {
         font-size: 18px;
         padding-bottom: 0;
     }
@@ -985,14 +1057,28 @@ body {
     }
     .linkImg > img {
         width: 20px;
-    }
+    } */
 }
-@media screen and (max-device-width: 290px) {
-    .projectInfo > p {
-        font-size: 12px;
+@media screen and (max-device-width: 412px) {
+    .popupInfo{
+        width: 110%;
+        transform: translateX(-50%);
+        top: 73%;
+        height: 60vh;
+        font-size: 14px;
     }
-    .projectName {
-        font-size: 16px;
+    .popupHeading{
+        font-size: 25px;
+    }
+    .popupTech > p > span {
+        font-size: 22px;
+    }
+    .projectDetails > .linkImg{
+        display: flex;
+        padding: 5%;
+    }
+    .projectDetails > .linkImg > img{
+        mix-blend-mode:difference;
     }
 }
 .projectBox:hover {
@@ -1002,6 +1088,23 @@ body {
 .projectBox:hover .projectInfo {
     top: 0%;
 }
+
+.projectInfo:focus {
+    top: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------------- FOOTER ---------------- */
 footer {
     display: flex;
