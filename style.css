@@ -5,13 +5,6 @@
     color: aliceblue;
     scroll-behavior: smooth;
 }
-*:not(input.field) {    
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 *::after,
 *::before {
     box-sizing: border-box;
@@ -1299,7 +1292,9 @@ footer {
         justify-content: center;
     }
 }
-
+input{
+    -webkit-appearance: none;
+}
 form {
     width: 100%;
 }
